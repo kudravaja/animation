@@ -1,0 +1,73 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+    <style media="screen">
+    body {
+      background: white;
+    }
+      .moon {
+        height: 152px;
+        width: 156px;
+        display: inline-block;
+        position: relative;
+        background: url("moon.png");
+      }
+
+      .emoji {
+        height: 152px;
+        width: 152px;
+        display: inline-block;
+        position: relative;
+        background: url("angry.png");
+      }
+
+      .snowman {
+        height: 152px;
+        width: 152px;
+        display: inline-block;
+        position: relative;
+        background: url("snowman.png");
+      }
+
+      .moon {
+        animation: moon 1s steps(1) infinite;
+      }
+
+      .emoji {
+        animation: emoji 2s steps(1) alternate infinite;
+      }
+
+      .snowman {
+        animation: snowman .5s steps(1) alternate infinite;
+      }
+
+      @keyframes moon {
+      0% {background-position: -160px top;}
+      13% {background-position: -320px top;}
+      26% {background-position: -480px top;}
+      39% {background-position: -640px top;}
+      51% {background-position: -800px top;}
+      64% {background-position: -960px top;}
+      77% {background-position: -1120px top;}
+      90% {background-position: 0px top;}
+      }
+
+      @keyframes emoji {
+      0% {background-position: 0px top;}
+      30% {background-position: -160px top;}
+      60% {background-position: -320px top;}
+      }
+
+      @keyframes snowman {
+      0% {background-position: 0px top;}
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="moon">  </div>
+    <div class="emoji">  </div>
+    <div class="snowman">  </div>
+  </body>
+</html>
